@@ -1,23 +1,37 @@
 {
-    "name": "svelte-project",
+    "name": "sveltekit-app",
     "version": "1.0.0",
-    "description": "Svelte Project",
     "scripts": {
-      "build": "rollup -c",
-      "start": "sirv public --single"
-    },
-    "devDependencies": {
-      "@rollup/plugin-commonjs": "^21.0.0",
-      "@rollup/plugin-node-resolve": "^13.0.0",
-      "rollup": "^2.60.0",
-      "rollup-plugin-css-only": "^3.1.0",
-      "rollup-plugin-livereload": "^2.0.0",
-      "rollup-plugin-svelte": "^7.0.0",
-      "rollup-plugin-terser": "^7.0.0",
-      "svelte": "^3.0.0",
-      "svelte-routing": "^1.8.1"
+      "dev": "svelte-kit dev",
+      "build": "svelte-kit build",
+      "preview": "svelte-kit preview"
     },
     "dependencies": {
-      "sirv-cli": "^1.0.0"
-    }
+      "@sveltejs/kit": "^1.0.0-next.1625164870",
+      "@sveltejs/adapter-static": "^1.0.0-next.13",
+      "svelte": "^3.44.0"
+    },
+    "devDependencies": {
+      "svelte-check": "^2.0.0",
+      "svelte-preprocess": "^4.9.7"
+    },
+    "type": "module",
+    "svelte": {
+      "preprocess": "svelte-preprocess"
+    },
+    "eslintConfig": {
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "rules": {}
+    },
+    "eslintIgnore": ["public/build"],
+    "browserslist": [
+      "maintained node versions",
+      ">= 0.25%, not dead"
+    ]
   }
+  

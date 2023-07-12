@@ -1,15 +1,20 @@
-<!-- index.svelte -->
 <script>
-    export let name;
-    export let university;
-    export let studentNumber;
+    export let name = 'Your Name';
+    export let university = 'Your University';
+    export let studentNumber = 'Your Student Number';
   </script>
   
-  <h1>Welcome to the Overview Page</h1>
-  <p>Name: {name}</p>
-  <p>University: {university}</p>
-  <p>Student Number: {studentNumber}</p>
+  <main>
+    <h1>Welcome to the Application</h1>
+    <h2>{name}</h2>
+    <h3>{university}</h3>
+    <h4>{studentNumber}</h4>
   
-  <p>Click on the links below to explore:</p>
-  <a href="/genes">Genes Overview</a>
-  <a href="/interactions">Interactions Overview</a>
+    <nav>
+      <ul>
+        <li><a href="/genes">Genes Overview</a></li>
+        <li><a href="/interactions">Interactions Overview</a></li>
+      </ul>
+    </nav>
+  </main>
+  
